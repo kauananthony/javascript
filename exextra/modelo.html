@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário de uma Pessoa</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+    <h1>Calculo de salário</h1>
+    </header>
+    <section>
+         <div id="msg">
+            <p>Qual é o seu salário por mês?
+               R$ <input type="number" name="sal" id="txtsal">
+            </p>
+            <p>qual o ano que você foi contratado?
+               <input type="number" name="ano" id="txtano">
+            </p>
+            <p>Onde você trabalha tem aumento de salário por ano?
+               <input type="radio" name="radq" id="txtSim">
+               <label for="txtSim">Sim</label>
+               <input type="radio" name="radq" id="txtNão">
+               <label for="txtNão">Não</label>
+            </p>
+            <p>Se existe aumento salarial, é de quanto?
+               <input type="number" name="au" id="txtau">%
+            </p>
+            <p>
+               <input type="button" value="Calcular" onclick="calcular()">
+            </p>
+         </div>
+         <div id="res">
+            coloque as informações acima!
+         </div>
+    </section>
+    <footer>
+       <p>&copy; cursoemvídeo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

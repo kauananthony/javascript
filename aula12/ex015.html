@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolução de equações</title>
+</head>
+<body>
+    <h1>Resolução de equações do 2° grau</h1>
+    <input type="number" name="a" id="txtn1">x²+
+    <input type="number" name="b" id="txtn2">x+
+    <input type="number" name="c" id="txtn3">=0
+    <input type="button" value="calcular raízes" onclick="calcular()">
+    <div id = 'res'>
+
+    </div>
+    <script>
+        function calcular() {
+            var a = window.document.querySelector('input#txtn1')
+            var b = window.document.querySelector('input#txtn2')
+            var c = window.document.querySelector('input#txtn3')
+            var da = Number(a.value)
+            var db = Number(b.value)
+            var dc = Number(c.value)
+            var d = (db ** 2 - 4 * da * dc)
+            var den = 2 * da
+            var x1 = (- db + (d) ** (1 / 2)) / den
+            var x2 = (- db - (d) ** (1 / 2)) / den
+            res.innerHTML = `<p>o valor das raízes da equação <strong>${da}x²+${db}x+${dc}=0</strong></p>`
+            res.innerHTML += `<p>são, respectivamente: <strong>${x1} e ${x2}</strong></p>`
+        }
+    </script>
+</body>
+</html>

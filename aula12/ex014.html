@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade para Votar</title>
+</head>
+<body>
+    <h1>Sistema de verficação de idade para Votar</h1>
+    Quantos anos você tem? <input type="number" name="ida" id="txtida">
+    <input type="button" value="Verificar" onclick="dizer()">
+    <div id = 'res'>
+
+    </div>
+    <script>
+        function dizer() {
+            var ida = window.document.querySelector('input#txtida')
+            var res = window.document.querySelector('div#res')
+            var vot = Number(ida.value)
+            res.innerHTML = `<p>você tem ${vot} anos</p>`
+            if (vot < 16) {
+                res.innerHTML += `<p>você <strong>não vota!</strong></p>`
+            } else if (vot < 18) {
+                res.innerHTML += `<p>voto <strong>opcional!</strong></p>`
+            } else if (vot > 18 && vot < 65) {
+                res.innerHTML += `<p>voto <strong>obrigatório!</strong></p>`
+            } else if (vot > 65) {
+                res.innerHTML += `<p>voto <strong>opcional!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
